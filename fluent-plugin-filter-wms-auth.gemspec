@@ -1,7 +1,7 @@
 Gem::Specification.new do |gem|
   gem.name          = 'fluent-plugin-filter-wms-auth'
   gem.summary       = 'fluent plugin to extract wms auth'
-  gem.version       = '1.0.4'
+  gem.version       = '1.0.5'
   gem.license       = 'MIT'
   gem.authors       = 'roma42427'
   gem.homepage      = 'https://github.com/roma42427/filter_wms_auth'

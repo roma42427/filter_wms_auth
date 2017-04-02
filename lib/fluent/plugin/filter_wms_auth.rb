@@ -8,7 +8,7 @@ class WmsAuth < Fluent::Plugin::Filter
   def filter(tag, time, record)
     record['host'.freeze] = HOST
 
-    path = record['path'.freeze]
+    path = record['path'.freeze] or return
     if path.sub! /wmsAuthSign=([^&]+)&?/, ''.freeze
       id,cookie,_ = Base64.decode64($1)[/id=([^&]+)/, 1].split('+'.freeze,3)
       record['user_id'.freeze] = id.to_i unless id.empty?
